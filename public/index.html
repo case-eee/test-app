@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Score Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📚 Student Score Tracker</h1>
+      <p class="subtitle">Track and review student test scores</p>
+    </header>
+
+    <!-- Summary bar -->
+    <div class="summary-bar">
+      <div class="stat">
+        <span class="stat-label">Total Students</span>
+        <span class="stat-value" id="total-count">—</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Class Average</span>
+        <span class="stat-value" id="class-average">—</span>
+      </div>
+    </div>
+
+    <!-- Add student form -->
+    <section class="card">
+      <h2>Add Student</h2>
+      <div class="form-row">
+        <input type="text" id="input-name" placeholder="Student name" autocomplete="off" />
+        <input type="number" id="input-score" placeholder="Score (0–100)" min="0" max="100" />
+        <button id="btn-add">Add</button>
+      </div>
+      <p id="form-error" class="error-msg hidden"></p>
+    </section>
+
+    <!-- Student list -->
+    <section class="card">
+      <div class="list-header">
+        <h2>Students</h2>
+        <button id="btn-sort" class="btn-secondary">Sort A–Z</button>
+      </div>
+      <div id="student-list" class="student-list">
+        <p class="empty-msg">Loading…</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
